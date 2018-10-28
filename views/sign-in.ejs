@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/owl.carousel.css">
+    <link rel="stylesheet" href="./stylesheets/owl.theme.default.css">
+    <link rel="apple-touch-icon-precomposed" href="../public/favicon.ico">
+    <link rel="icon" href="../public/favicon.png">
+    <title>
+        <%=title%>
+    </title>
+</head>
+
+<body>
+    <a href="#" id="scroll">
+        <span></span>
+    </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2" id="logo">
+                <a href="/">
+                    <img src="./images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <form class="form-inline">
+                    <label class="sr-only" for="inlineFormInputGroupUsername2">Tìm kiếm</label>
+                    <div class="input-group mt-5 mr-sm-2 ml-3">
+                        <input type="search" class="form-control" aria-label="Search" placeholder="Tìm kiếm sản phẩm">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-5 mt-5 pt-2">
+                <div class="login ml-4">
+                    <a href="#" data-toggle="modal" data-target="#exampleModal">
+                        Đăng nhập / Đăng ký
+                    </a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row d-flex justify-content-center">
+                                            <img src="./images/account.png" alt="img" style="height: 150px;">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Tên đăng nhập:</label>
+                                                <input style="width: 350px; border-radius: 15px;" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                    placeholder="Tên đăng nhập">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Mật khẩu:</label>
+                                                <input style="width: 350px; border-radius: 15px;" type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
+                                            </div>
+                                            <div class="col-sm-12 d-flex justify-content-center">
+                                                <button id="signup-btn" type="submit" class="btn btn-success">Đăng nhập</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer sign-in">
+                                    <a href="#">Quên mật khẩu</a>
+                                    /
+                                    <a href="/signin">Đăng ký</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping-cart ml-4">
+                    <a href="/shoppingcart">
+                        <i class="fas fa-shopping-cart" id="shopping-cart"></i>
+                        <span class="badge badge-danger">4</span>
+                    </a>
+                </div>
+                <div class="hot-line ml-5">
+                    <i class="fas fa-phone-volume"></i>
+                    <p class="badge badge-danger">01674 834 476</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3" id="myNavbar">
+        <a class="navbar-brand ml-5" href="/">
+            <i class="fas fa-home"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        CHĂM SÓC DA
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        CHĂM SÓC CƠ THỂ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        CHĂM SÓC TÓC
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        TRANG ĐIỂM
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        NƯỚC HOA
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        THƯƠNG HIỆU
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid signin-bgr" style="min-height: 100vh;">
+        <div class="row pt-3">
+            <div class="col" style="border-right: 1px solid grey;">
+                <div class="signin-form pt-5" style="margin-left: 230px;">
+                    <form class="pt-5">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Họ và tên:</label>
+                            <input style="width: 350px; border-radius: 15px;" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Nguyễn Văn A">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Số điện thoại:</label>
+                            <input style="width: 350px; border-radius: 15px;" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="01674 834 476">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Mật khẩu:</label>
+                            <input style="width: 350px; border-radius: 15px;" type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Nhập lại mật khẩu:</label>
+                            <input style="width: 350px; border-radius: 15px;" type="password" class="form-control" id="exampleInputPassword1" placeholder="Nhập lại mật khẩu">
+                        </div>
+                        <button id="signup-btn" style="margin-left: 70px;" type="submit" class="btn btn-success mt-2">Đăng ký</button>
+                        <p class="pt-3" style="margin-left: 155px;">hoặc</p>
+                        <div class="fb-gg" style="margin-left: -60px;">
+                            <button class="loginBtn loginBtn--facebook">
+                                Đăng nhập với Facebook
+                            </button>
+                            <button class="loginBtn loginBtn--google">
+                                Đăng nhập với Google
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col">
+                <img src="./images/signin.jpeg" alt="img" class="pt-5">
+            </div>
+        </div>
+
+    </div>
+    <script src="./javascripts/owl.carousel.js"></script>
+    <script src="./javascripts/jquery.js"></script>
+    <script src="./javascripts/parallax.js"></script>
+    <script src="./seeddata.js"></script>
+</body>
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 d-flex justify-content-center icon-right pt-5 pb-4">
+                    <div class="envelope">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="word-right">
+                        <h6>Gửi email cho chúng tôi</h6>
+                        <p>maskin@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center icon-right pt-5 pb-4">
+                    <div class="phone">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="word-right">
+                        <h6>(+84) 1674 834 476</h6>
+                        <p>Mon - Sun: 8:00 - 22:00</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center pt-5 pb-4">
+                    <button class="btn btn-contact">Liên hệ với chúng tôi</button>
+                </div>
+                <div class="col-sm-3 footer-border-right">
+                    <div class="maskin">
+                        <h1>MASKIN</h1>
+                        <h6>25/7 Xa lộ Hà Nội, phường An Phú, quận 2, TP HCM</h6>
+                    </div>
+                    <ul id="remove-dot">
+                        <li>
+                            <a href="#">(+84)&nbsp;1674 834 476</a>
+                        </li>
+                        <li>
+                            <a href="#">maskin@gmail.com</a>
+                        </li>
+                    </ul>
+                    <ul class="social-icon">
+                        <li>
+                            <i class="fab fa-facebook-f social-fix" title="Facebook"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram social-fix" title="Instagram"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-twitter social-fix" title="Twitter"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 footer-border-right">
+                    <div class="address" id="underline">
+                        <h3>Địa chỉ</h3>
+                    </div>
+                    <ul id="remove-dot">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <a href="#">&nbsp;25/7 Xa lộ Hà Nội, phường An Phú, quận 2, TP HCM</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 footer-border-right">
+                    <div class="support" id="underline">
+                        <h3>Hỗ trợ khách hàng</h3>
+                    </div>
+                    <ul id="remove-dot">
+                        <li>
+                            <i class="fas fa-truck-moving"></i>
+                            <a href="#">&nbsp;Chính sách giao hàng</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-coins"></i>
+                            <a href="#">&nbsp;Phương thức thanh toán</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-sync"></i>
+                            <a href="#">&nbsp;Chính sách đổi trả</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 footer-border-left">
+                    <div class="link" id="underline">
+                        <h3>Liên kết</h3>
+                    </div>
+                    <ul id="remove-dot">
+                        <li>
+                            <i class="fas fa-truck-moving"></i>
+                            <a href="#">&nbsp;Chính sách giao hàng</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-coins"></i>
+                            <a href="#">&nbsp;Phương thức thanh toán</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-sync"></i>
+                            <a href="#">&nbsp;Chính sách đổi trả</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center icon-left pt-5 pb-4">
+                    <div class="truck">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <div class="word-left">
+                        <h6>Miễn phí giao hàng</h6>
+                        <p>cho tất cả hóa đơn trên 1.000.000
+                            <sup>vnđ</sup>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center icon-left pt-5 pb-4">
+                    <div class="medal">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="word-left">
+                        <h6>Chất lượng sản phẩm đảm bảo 100%</h6>
+                        <p>có giấy tờ kiểm chứng</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center icon-left pt-5 pb-4">
+                    <div class="life-ring">
+                        <i class="far fa-life-ring"></i>
+                    </div>
+                    <div class="word-left">
+                        <h6>Hỗ trợ 24/7</h6>
+                        <p>sẵn sàng trả lời các câu hỏi của bạn</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 copy-right text-center pt-4">
+                    <p>Copyright &copy; 2018, Maskin, All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
